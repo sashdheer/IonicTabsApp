@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+       Top People
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+    <ion-list-header>
+      <ion-label>Top People</ion-label>
+    </ion-list-header>
+
+    <ion-item button *ngFor="let people of (results | async)" [routerLink] = "[people.id]">
+      <ion-icon slot="start" color="medium" name="walk"></ion-icon>
+      {{ people.name }}
+     </ion-item>
+  </ion-list>
+</ion-content>

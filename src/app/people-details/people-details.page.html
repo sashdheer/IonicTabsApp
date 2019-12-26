@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{peopleDetails.name}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Birth day : {{peopleDetails.birthday | date}} </ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <p>{{peopleDetails.biography}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

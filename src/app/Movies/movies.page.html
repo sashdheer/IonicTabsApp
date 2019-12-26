@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Movies  <img src="/assets/moviedb.svg" width="30px" height="30px" alt=""/>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+     
+      <ion-card-header>
+        <ion-card-subtitle>Welcome Ranjith</ion-card-subtitle>
+        <ion-card-title>Movies Database</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Everything you need to easily and efficiently find all about movies, tv shows, and people.</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-list lines="inset">
+      <ion-list-header>
+        <ion-label>Top Movies</ion-label>
+      </ion-list-header>
+
+      <ion-item button *ngFor="let movie of (results | async)" [routerLink] = "[movie.id]">
+        <ion-icon slot="start" color="medium" name="videocam"></ion-icon>
+        {{ movie.title }}
+       </ion-item>
+    </ion-list>
+</ion-content>

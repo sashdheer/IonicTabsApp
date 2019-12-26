@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{details.title}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Release date : {{details.release_date | date }} </ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <p>{{details.overview}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
